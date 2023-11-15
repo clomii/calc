@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* Text color */
+}
+
+#calculator {
+    text-align: center;
+    background-color: #1c1c1e; /* Calculator background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#display {
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    width: calc(100% - 20px); /* Adjust width to avoid overlap */
+    padding: 10px;
+    font-size: 24px;
+    background-color: #272729;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4d4d4f; /* Button background color */
+    color: #ffffff; /* Button text color */
+    cursor: pointer;
+}
+
+.buttons button.operator {
+    background-color: #ff9500; /* Orange color for operators */
+    color: #000000; /* Black text color for operators */
+}
+
+button:active {
+    background-color: #39393a; /* Darker color on button press */
+}
+
+.buttons button.clear {
+    grid-column: span 2; /* Make the 'C' button span two columns */
+    background-color: #ff3b30; /* Red color for the 'C' button */
+    color: #ffffff; /* White text color for the 'C' button */
+}
+
+.buttons button.zero {
+    grid-column: span 2;
+}
+
+.buttons button.equal {
+    grid-column: span 2;
+    background-color: green;
+}
+
